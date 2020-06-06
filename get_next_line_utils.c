@@ -6,7 +6,7 @@
 /*   By: skarry <skarry@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/25 15:19:07 by skarry            #+#    #+#             */
-/*   Updated: 2020/06/04 14:16:14 by skarry           ###   ########.fr       */
+/*   Updated: 2020/06/06 17:37:17 by skarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char		*ft_strtosup(char const *s, size_t len)
 		return (NULL);
 	if (ft_strlen(s) < len)
 		len = ft_strlen(s);
-	if (!(res = (char *)calloc(sizeof(char), (len + 1))))
+	if (!(res = (char *)ft_calloc(sizeof(char), (len + 1))))
 		return (NULL);
 	i = 0;
 	while (i < len)
@@ -79,7 +79,7 @@ char		*ft_strjoin(char *s1, char *s2)
 	if (!s1 || !s2)
 		return (0);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	if (!(res = (char *)calloc(sizeof(char), (len + 1))))
+	if (!(res = (char *)ft_calloc(sizeof(char), (len + 1))))
 		return (NULL);
 	while (*s1 != '\0')
 		*res++ = *s1++;
